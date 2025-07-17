@@ -1,4 +1,3 @@
-```markdown
 # 🍽️ Menu Management System
 
 A **full-stack menu management system** designed for restaurants and food businesses to efficiently manage category-based menus, track item availability in real-time, and handle cart operations for a smooth customer experience.
