@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* Additional CSS for button alignment */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img style="border-style:solid;border-color: hsl(41, 100%, 50%);border-width:2px;border-radius:3px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtweH2qj8hXBTQa3LtlGbHiMUe2_at1D3Ze4ZBbms22KBgcIbBZ7LIgaVv9iG-roxR6I&usqp=CAU" width="60px"></div>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">contacts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding:5px;border-style:solid;border-color: hsl(41, 100%, 50%);border-width:2px;border-radius:3px;" href="Bookatable.html">Book A Table</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <h1>Checkout</h1>
+
+    <div id="checkout-items">
+        <!-- Display items dynamically here -->
+    </div>
+    
+    <div class="button-container">
+        <button id="continue-shopping-btn">Want to proceed to buy more things?</button>
+        <button id="proceed-payment-btn">Proceed to payment</button>
+    </div>
+
+    <script>
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalAmount = localStorage.getItem('totalAmount') || 0;
+
+    const checkoutItemsDiv = document.getElementById('checkout-items');
+
+    if (cartItems.length > 0) {
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('item');
+
+            itemDiv.innerHTML = `
+                <div class="image"><img src="${item.imgSrc}" alt="${item.name}" width="100"></div>
+                <div class="details">
+                    <h3>${item.name}</h3>
+                    <p>Price: $${item.price}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                </div>
+            `;
+            checkoutItemsDiv.appendChild(itemDiv);
+        });
+
+        const totalDiv = document.createElement('div');
+        totalDiv.innerHTML = `<strong>Total: $${totalAmount}</strong>`;
+        checkoutItemsDiv.appendChild(totalDiv);
+    } else {
+        checkoutItemsDiv.innerHTML = '<p>No items in cart.</p>';
+    }
+
+    document.getElementById('continue-shopping-btn').addEventListener('click', () => {
+        // Do NOT clear localStorage here
+        window.location.href = 'menu.html';
+    });
+
+    document.getElementById('proceed-payment-btn').addEventListener('click', () => {
+        alert('Proceeding to payment...');
+        window.location.href = 'payment.html';
+    });
+</script>
+
+</body>
+</html>

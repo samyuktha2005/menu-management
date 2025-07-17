@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* Additional styles for dynamic categories */
+        nav{
+            position: fixed;
+            display:flex;
+            width: 93%;
+        }
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            margin: 5% 5%;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .category-nav img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .category-nav img:hover {
+            transform: scale(1.1);
+        }
+        .category-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        .category-nav span {
+            margin-top: 8px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="showcart">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color:rgb(47, 46, 45);">
+        <div class="container-fluid">
+          <img style="border-style:solid;border-color: hsl(41, 100%, 50%);border-width:2px;border-radius:3px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtweH2qj8hXBTQa3LtlGbHiMUe2_at1D3Ze4ZBbms22KBgcIbBZ7LIgaVv9iG-roxR6I&usqp=CAU" width="60px"></div>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">contacts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding:5px;border-style:solid;border-color: hsl(41, 100%, 50%);border-width:2px;border-radius:3px;" href="Bookatable.html">Book A Table</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="container">
+            <header>
+                <div class="icon-cart" id="cart-icon">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                    </svg>
+                    <span>0</span>
+                </div>
+            </header>
+        </div>
+    </nav>
+    
+    <div style="text-decoration:underline;display: flex; justify-content: center; color: aliceblue; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 50px; width: 100%;">MENU</div>
+    
+    <!-- Dynamic category navigation will be inserted here -->
+    <div class="category-nav" id="categoryNav">
+        <!-- Categories will be dynamically added by JavaScript -->
+    </div>
+    
+    <!-- Main menu container where categories will be inserted -->
+    <div id="menu"></div>
+    
+    <!-- Cart section -->
+    <div class="carttab" id="cart">
+        <h1>Shopping Cart</h1>
+        <div class="listcart" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="btn">
+            <button class="close" onclick="toggleCart()">CLOSE</button>
+            <button class="checkout" onclick="checkout()">CHECK OUT</button>
+        </div>
+    </div>
+    
+    <script src="menu.js"></script>
+    <script src="user.js"></script>
+    
+    
+</body>
+</html>

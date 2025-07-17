@@ -1,0 +1,228 @@
+.bg-1 {
+  background-image: url("https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: overlay;
+}
+
+.container-fluid {
+  border-radius: 5px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black; /* or match your theme */
+}
+
+.context {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: rgb(250, 246, 246);
+  font-size: 46px;
+  font-family: 'Dancing Script', cursive;
+  animation: fadeIn 2s ease;
+}
+
+.context-2 {
+  position: absolute;
+  top: 62%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  color: white;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.button-1 {
+  padding: 15px;
+  position: absolute;
+  top: 72%;
+  left: 25%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  animation: fadeIn 2s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-style: solid;
+  border-color: hsl(41, 100%, 50%);
+  border-width: 5px;
+}
+
+.button-1:hover {
+  transform: scale(1.1);
+  background-color: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.button-1 a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  animation: fadeIn 2s ease;
+}
+
+.button-1 a:hover {
+  color: #eeede9;
+}
+
+.circle-image {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+  float: right;
+  padding: 30px;
+  animation: spin 22s linear infinite;
+  border-style: solid;
+  border-color: #f1c40f;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.circle-image:hover {
+  transform: scale(1.1);
+}
+
+.bg-2 {
+  background-image: url("https://img.freepik.com/premium-photo/vintage-ornament-pattern-design-elegant-backgrounds-textures_999409-1017.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1697328000&semt=ais");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  margin: 0;
+  background-color: rgba(9, 9, 9, 0.8);
+  background-blend-mode: overlay;
+}
+
+.image-1, .image-2, .image-3 {
+  position: absolute;
+  padding: 15px;
+  margin: 20px;
+  border: 3px solid #706e6e;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-1 {
+  top: 130%;
+  left: 15%;
+}
+
+.image-2 {
+  top: 150%;
+  left: 42%;
+}
+
+.image-3 {
+  top: 130%;
+  left: 71%;
+}
+
+.image-1 img, .image-2 img, .image-3 img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.image-1:hover, .image-2:hover, .image-3:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+p {
+  font-size: large;
+  font-style: italic;
+  color: #f1ebeb;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+
+img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card-deck {
+  justify-content: space-between;
+  margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-color: #f7f3f3;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 0 0 23%;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+.card-img-top {
+  border-radius: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .context {
+    font-size: 32px;
+  }
+  .context-2, .button-1 {
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  }
+  .button-1 {
+    top: 80%;
+  }
+  .circle-image {
+    width: 300px;
+    height: 300px;
+  }
+  .image-1, .image-2, .image-3 {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 0 0 100%;
+    margin: 10px 0;
+  }
+}

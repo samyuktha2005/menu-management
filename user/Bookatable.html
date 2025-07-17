@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Reservation</title>
+    <link rel="stylesheet" href="Bookatabel.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body class="bg-1">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img style="border-style:solid;border-color: hsl(41, 100%, 50%);border-width:2px;border-radius:3px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtweH2qj8hXBTQa3LtlGbHiMUe2_at1D3Ze4ZBbms22KBgcIbBZ7LIgaVv9iG-roxR6I&usqp=CAU" width="60px"></div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="padding:5px;border-style:solid;border-color: hsl(41, 100%, 50%);border-width:2px;border-radius:3px;" href="Bookatable.html">Book A Table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+    <div>
+        <center style="left:50px;top:30vh;color:rgb(222, 193, 155);font-size:40px;font-family:serif;font-style:oblique">Table Booking Form</center>
+    </div>
+    <div class="container">
+        <div class="img-1">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/454619201.jpg?k=5eb9b3bd08d7c3610bc6de49149214298fe855b2bde1e53b9e174ba43d7b00a3&o=&hp=1" width="100%;" height="80%">
+        </div>
+        <div class="form-container">
+            <form action="" class="formcss">
+                <label id="Name" for="Name">Name: </label>
+                <input type="text" placeholder="Name"><br><br>
+                <label id="number" for="number">Phone Number:</label>
+                <input type="number" placeholder="number"><br><br>
+                <label id="noa" for="noa" placeholder="Number of Adults booking table">Number of Adults:</label>
+                <input type="number" min="1" max="10"><br><br>
+                <label id="noc" for="noc" placeholder="Number of children booking table">Number of Children:</label>
+                <input type="number" min="1" max="10"><br><br>
+                <label id="date" for="date">Date:</label><br>
+                <input type="date"><br><br>
+                <label id="time" for="time">Time:</label><br>
+                <input type="time"><br><br>
+                <button type="submit" style="background-color: green;">Submit</button><button type="reset" style="background-color: red;float:right;">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

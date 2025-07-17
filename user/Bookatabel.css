@@ -1,0 +1,80 @@
+.bg-1{
+    background-image: url("https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+}
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-1 {
+    flex-basis: 40%;
+    margin: 10px;
+    float:left;
+}
+.img-1:hover{
+    transform: scale(0.8);
+    box-shadow: 0 0 15px rgba(245, 241, 241, 0.8);
+
+}
+.form-container {
+    flex-basis: 50%;
+    padding: 10px;
+    margin:5px;
+    left:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form elements */
+}
+
+.formcss {
+    margin: 10px;
+    border-style: solid;
+    border-color: aliceblue;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    margin-bottom: 15px;
+}
+
+.form-item label {
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button{
+    color:black;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    padding:5px;
+}
+button:hover{
+    text-decoration: underline;
+    padding:10px;
+    background-color: aliceblue;
+}
