@@ -139,5 +139,3 @@ For any queries or collaborations, reach out:
 ---
 
 Happy coding!
-
-````
